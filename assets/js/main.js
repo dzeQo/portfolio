@@ -59,3 +59,54 @@ tabs.forEach((tab) => {
     tab.classList.add("qualification__active");
   });
 });
+
+//dark / light theme
+
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark_theme";
+const iconTheme = "uil-sun";
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+
+//validate if user previously chose a theme
+if (selectedTheme) {
+  // if theme selected by user previously then we add/remove classes again based on localStorage
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+    iconTheme
+  );
+}
+//if initially there is no local storage ie. user has not made a choice and this is first time loading
+//then we check if browser/OS is in dark mode and then add dark theme if required by default
+else if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  console.log("found dark mode for browser/OS");
+  // add dark theme by setting dark theme flags in localStorage
+  localStorage.setItem("selected-theme", "dark");
+  localStorage.setItem("selected-icon", "uil-moon");
+  // add classes for dark theme in DOM
+  document.body.classList.add(darkTheme);
+  themeButton.classList.add(iconTheme);
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener("click", () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  // We save the theme and the current icon that the user chose
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});

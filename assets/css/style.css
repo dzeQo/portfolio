@@ -12,7 +12,22 @@ html{
     scroll-behavior: smooth;
 }
 :root{
-    --color-primary: #29d882;
+    --hue-color: 250;
+    /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --color-first: #29d882;
     --color-primary-variant: #00bd95;
     --color-white: #ffff;
     --color-light: #f0fcf9;
@@ -46,11 +61,12 @@ h1,h2,h3,h4,h5{
 }
 h1{
     font-size: 60px;
+    color: var(--title-color);
 }
 h2{
     font-size: 44px;
     text-align: center;
-    color: var(--color-off-black);
+    color: var(--title-color);
     width: fit-content;
     margin: auto;
     margin-bottom: 4rem;
@@ -60,7 +76,7 @@ h2::before{
     content: '';
     position: absolute;
     bottom: 0;
-    background-color: var(--color-primary);
+    background-color: var(--color-first);
     left: -1rem;
     height: 3.4rem;
     width: 3.4rem;
@@ -70,22 +86,26 @@ h2::before{
 }
 h3{
     font-size: 34px;
+    color: var(--title-color);
 }
 h4{
     font-size: 28px;
+    color: var(--title-color);
 }
 h5{
     font-size: 20px;
+    color: var(--title-color);
 }
 p{
     font-size: 19px;
     line-height: 150%;
-    color: var(--color-dark);
+    color: var(--title-color);
 }
 img{
     display: block;
     width: 100%;
 }
+
 .btn{
     display: inline-block;
     width: fit-content;
@@ -93,7 +113,7 @@ img{
     font-weight: 500;
     padding: 14px 32px;
     border-radius: 30px;
-    background: var(--color-primary);
+    background: var(--color-first);
     color: var(--color-white);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     transition: var(--transition);
@@ -156,7 +176,7 @@ nav button{
     content: '';
     width: 0;
     height: 3px;
-    background: var(--color-primary);
+    background: var(--color-first);
     position: absolute;
     border-radius: 6px;
     bottom: -6px;
@@ -193,7 +213,7 @@ header{
 }
 .head_cont h3{
     margin: 1rem 0;
-    color: var(--color-primary);
+    color: var(--color-first);
 }
 .head_cont p{
     margin: 0 0 2rem;
@@ -207,7 +227,7 @@ header{
     height: 28rem;
     width: 28rem;
     position: relative;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-first);
     border-radius: 50%;
     animation: Moving 20s linear infinite ;
 }
@@ -230,13 +250,13 @@ header{
     background: var(--color-white);
     position: absolute;
     border-radius: 50%;
-    color: var(--color-primary);
+    color: var(--color-first);
     font-size: 22px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 .circle a:hover{
-    background: var(--color-primary);
+    background: var(--color-first);
     color: var(--color-white);
 }
 .circle a:nth-child(1){
@@ -265,7 +285,7 @@ header{
     padding-right: 3rem;
     overflow: hidden;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: var(--color-first);
     animation: col 20s linear infinite;
 }
 
@@ -280,7 +300,7 @@ header{
 .about_img{
     border-radius: 50%;
     overflow: hidden;
-    border: .8rem solid var(--color-primary);
+    border: .8rem solid var(--color-first);
     background-color: var(--color-primary-variant);
 }
 .about_img img{
@@ -340,7 +360,7 @@ header{
 }
 
 .skills_arrow{
-    color: var(--color-primary);
+    color: var(--color-first);
     margin-right: var(--mb-0-75);
 }
 .skills_title{
@@ -478,16 +498,16 @@ header{
 }
 .contact_cont a{
     padding:  16px 19px;
-    background: var(--color-primary);
+    background: var(--color-first);
     display: flex;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-first);
     font-size: 24px;
     color: var(--color-white);
     border-radius: 50%;
     transition: var(--transition);
 }
 .contact_cont a:hover{
-    color: var(--color-primary);
+    color: var(--color-first);
     background: transparent;
 }
 
@@ -505,7 +525,7 @@ footer{
     display: flex;
     align-items: end;
     justify-content: end;
-    color: var(--color-primary);
+    color: var(--color-first);
     font-size: 30px;
     padding: 10px 10px;
 }
@@ -535,7 +555,7 @@ footer{
 }
 
 .qualification__button:hover {
-  color: var(--color-primary);
+  color: var(--color-first);
 }
 
 .qualification__icon {
@@ -570,7 +590,7 @@ footer{
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: var(--color-primary);
+  background-color: var(--color-first);
   border-radius: 50%;
 }
 
@@ -578,7 +598,7 @@ footer{
   display: block;
   width: 1px;
   height: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-first);
   transform: translate(6px, -7px);
 }
 
@@ -591,26 +611,33 @@ footer{
 }
 
 .qualification__button.qualification__active {
-  color: var(--color-primary);
+  color: var(--color-first);
 }
 
-/*qualification*/
-.qual_tabs{
-    display: inline-block;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
+/*dark theme variables */ 
+body.dark_theme{
+    background: var(--color-black);
+    --color-primary-variant: hsl(var(--hue-color) , 30% , 8%);
+    --title-color: hsl(var(--hue-color) , 8% , 95%);
+    --text-color:hsl(var(--hue-color) , 8% , 75%);
+    --color-white: #ffff;
+    --color-dark: #ffff;
+    --color-black : #171c23;
+    --color-off-black : #21272f;
+    --bg-var: hsl(var(--hue-color) , 29% , 16%);;
 }
-.qual_btn{
-    font-size: var(--h3-font-size);
-    font-weight: 500;
+span.dark_theme{
+    color: var(--text-color);
+}
+/*  dark theme changer */
+.change-theme{
+    font-size: 1.25rem;
+    color: var(--color-dark);
+    margin-right: 1rem;
     cursor: pointer;
 }
-.qual_btn:hover{
-    color: var(--color-primary);
-}
-.qual_icon{
-    font-size: 1.8rem;
-    margin-right: .25rem;
+.change-theme:hover{
+    color: var(--color-first);
 }
 /* ==== media responsive styling ==== */
 /* maxw 1200px */
@@ -637,7 +664,7 @@ footer{
         top: 5rem;
         width: 20rem;
         height: 100vh;
-        background: var(--color-primary);
+        background: var(--color-first);
         right: -100%;
         flex-direction: column;
         gap: 0;
@@ -805,4 +832,8 @@ footer{
     }
 
 
+}
+
+span{
+    color: var(--text-color-light); 
 }
