@@ -286,7 +286,6 @@ header{
     overflow: hidden;
     border-radius: 50%;
     background: var(--color-first);
-    animation: col 20s linear infinite;
 }
 
 /* =====  About Styles  ===== */
@@ -340,7 +339,7 @@ header{
     grid-template-columns: 1fr  1fr;
     gap: 10%;
     align-items: center;
-    padding: 4rem 4rem 4rem 4rem;
+    /*padding: 4rem 4rem 4rem 4rem;*/
 }
 .skill_right{
     display: flex;
@@ -856,8 +855,8 @@ span.dark_theme{
     }
     
     .image{
-        height: 14rem;
-        width: 14rem;
+        height: 12rem;
+        width: 12rem;
     }
     .projects_container{
         grid-template-columns: 1fr;
@@ -878,3 +877,4 @@ span.dark_theme{
 span{
     color: var(--text-color-light); 
 }
+
