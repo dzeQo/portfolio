@@ -187,7 +187,7 @@ nav button{
 }
 
 .nav_links li a:hover{
-    color: var(--color-black) !important ;
+    color: var(--color-first) !important ;
 }
 .active{
     color: var(--color-black) ;
@@ -485,7 +485,8 @@ header{
 }
 .project_action .btn{
     border-radius: 10px;
-    background: var(--color-dark);
+    background: var(--color-first);
+    color: var(--color-white);
     margin-bottom: 1rem;
 }
 
@@ -671,12 +672,16 @@ span.dark_theme{
         transition: var(--transition);
         box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
     }
-
+    .change-theme{
+        font-size: 1.25rem;
+        margin-right: auto;
+        cursor: pointer;
+    }
+    
     /* Adjust the navigation button and links for smaller screens */
     .nav_link_block {
         right: 0;
     }
-
     .nav_links li {
         width: 100%;
     }
@@ -702,6 +707,11 @@ span.dark_theme{
         font-size: 1.8rem;
         color: var(--color-black);
     }
+    .btn-them{
+        display: inline-block;
+        font-size: 1.8rem;
+    }
+
     h1{
         font-size: 40px;
     }
@@ -732,6 +742,37 @@ span.dark_theme{
     .head_left {
         text-align: center;
     }
+    .circle{
+        height: 20rem;
+        width: 20rem;
+    }
+    .circle a {
+        height: 3rem;
+        width: 3rem;
+        font-size: 20px;
+    }
+    .circle a:nth-child(1){
+        left: calc(50% - 1.5rem);
+        top: -1.5rem;
+    }
+    .circle a:nth-child(2){
+        top: calc(50% - 1.5rem);
+        right: -1.5rem;
+    }
+    .circle a:nth-child(3){
+        top: calc(50% - 1.5rem);
+        left: -1.5rem;
+    }
+    .circle a:nth-child(4){
+        left: calc(50% - 1.5rem);
+        bottom: -1.5rem;
+    }
+    
+    .image{
+        height: 16rem;
+        width: 16rem;
+    }
+
     /* Make about section responsive */
     .abt_cont {
         grid-template-columns: 1fr;
