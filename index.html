@@ -39,7 +39,7 @@
         <header>
             <div class=" container head_cont">
                 <div class="head_left">
-                    <h1> Web developer <br> & System Administrator</h1>
+                    <h1 id="auto-typed">I'm </h1>
                     <h3>Hi, I am Zakariae Lebisser</h3>
                     <p>
                         Low experience in web developemnt , has a knowledge about backend coding ,has coded some project using Laravel
@@ -48,10 +48,10 @@
                 </div>
                 <div class="head_right">
                     <div class="circle">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-github"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://github.com/dzeQo/"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com/ZLebisser"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/zakariae-lebisser-7a67061a3/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
 
                     <div class="image">
@@ -93,7 +93,7 @@
                     </div>
 
                     <a href="#Contact_Me" class="btn">Contact Me <i class="fa-brands fa-telegram"></i></a>
-                    <a href="assets/pdf/zakariaeCV.pdf" class="btn" download>Download CV <i class="fa-solid fa-download"></i> </a>
+                    <a href="assets/pdf/zakariae.pdf" class="btn" download>Download CV <i class="fa-solid fa-download"></i> </a>
                 </div>
             </div>
         </section>
@@ -551,7 +551,16 @@
 
     <!-----  Scripts Section  ---->
     <script src="assets/js/main.js"></script>
-</body>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#auto-typed', {
+          strings: ['<i>Web</i> Developer.', '&amp; System Administrator.'],
+          typeSpeed: 100,
+          backSpeed: 75,
+          loop: true
+        });
+      </script>
+    </body>
 </html>
 
 
